@@ -32,7 +32,7 @@ module.exports = {
   },
   /** 开发环境代理 */
   devServer: {
-    open: true,
+    open: false,
     proxy: {
       '/api': {
         target: 'http://localhost:3000',

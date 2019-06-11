@@ -19,7 +19,7 @@ var allDistanceData = {
 var pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: '8151186051',
+    password: '123456',
     database: 'trip'
 });
 /* GET users listing. */

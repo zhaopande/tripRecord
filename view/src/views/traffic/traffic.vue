@@ -293,7 +293,7 @@ export default {
     // 搜索关键字
     searchKey (keyword) {
       //   Toast.loading('正在搜索...')
-      this.ToastHide('正在搜索...')
+      this.ToastHide('正在搜索...');
       let that = this
       this.trafficMap.plugin('AMap.Autocomplete', function () {
         // 实例化Autocomplete
@@ -326,6 +326,8 @@ export default {
       let that = this
       let type = that.tripTypeMarriage.slice(5, 15)
       console.log(type)
+      console.log(this.trafficMap.plugin);
+      console.log(this.trafficMap);
       this.trafficMap.plugin(that.tripTypeMarriage, function () {
         that.driving = new window.AMap[type]({
           map: that.trafficMap,
@@ -334,6 +336,7 @@ export default {
           autoFitView: true
           //   policy: window.AMap.TransferPolicy.LEAST_TIME
         })
+        console.log(that.driving);
         // 根据起终点经纬度规划驾车导航路线
         that.driving.search(
           LngLatArr[0],

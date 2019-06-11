@@ -300,6 +300,7 @@ export default {
     // 移动轨迹图
     mapPath () {
       let that = this
+      console.log(this.geolocationData);
       let lineArr = this.geolocationData.slice()
       let marker = new window.AMap.Marker({
         map: that.map,
