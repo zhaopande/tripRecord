@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import { TabBar, Icon } from 'mand-mobile'
+// import { TabBar, Icon } from 'mand-mobile'
 
 export default {
   name: 'barTab',
-  components: {
-    [TabBar.name]: TabBar,
-    [Icon.name]: Icon
-  },
+  // components: {
+  //   [TabBar.name]: TabBar,
+  //   [Icon.name]: Icon
+  // },
   data () {
     return {
       currentTab: 1,

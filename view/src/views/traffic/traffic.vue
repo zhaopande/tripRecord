@@ -295,13 +295,13 @@ export default {
       //   Toast.loading('正在搜索...')
       this.ToastHide('正在搜索...');
       let that = this
-      this.trafficMap.plugin('AMap.Autocomplete', function () {
+      this.trafficMap.plugin('AMap.Autocomplete', function () {//异步加载指的是在 JS API 加载完成之后，在需要使用到某个插件的时候，通过AMap.plugin方法按需引入插件，在plugin回调之后使用插件功能。
         // 实例化Autocomplete
         var autoOptions = {
           // city 限定城市，默认全国
           city: '全国'
         }
-        var autoComplete = new window.AMap.Autocomplete(autoOptions)
+        var autoComplete = new window.AMap.Autocomplete(autoOptions);//
         autoComplete.search(keyword, function (status, result) {
           Toast.hide()
           // 搜索成功时，result即是对应的匹配数据
@@ -326,7 +326,7 @@ export default {
       let that = this
       let type = that.tripTypeMarriage.slice(5, 15)
       console.log(type)
-      console.log(this.trafficMap.plugin);
+      console.log(window.AMap);
       console.log(this.trafficMap);
       this.trafficMap.plugin(that.tripTypeMarriage, function () {
         that.driving = new window.AMap[type]({
